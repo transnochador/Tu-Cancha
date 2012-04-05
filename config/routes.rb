@@ -1,5 +1,9 @@
 TuCancha::Application.routes.draw do
+<<<<<<< HEAD
   resources :people
+=======
+  resources :places
+>>>>>>> 5b42218892253ac297ed20362347fbe7391e94f9
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
