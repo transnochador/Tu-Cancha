@@ -1,23 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  type: false
+  userty: false
   name: MyString
   lastname: MyString
   doctype: MyString
   docnumber: MyString
   email: MyString
   password: MyString
-  birthdate: 2012-04-04
-  cellhphone: MyString
+  birthdate: 2012-04-06
+  cellphone: 2012-04-06
 
 two:
-  type: false
+  userty: false
   name: MyString
   lastname: MyString
   doctype: MyString
   docnumber: MyString
   email: MyString
   password: MyString
-  birthdate: 2012-04-04
-  cellhphone: MyString
+  birthdate: 2012-04-06
+  cellphone: 2012-04-06

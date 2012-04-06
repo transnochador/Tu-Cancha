@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Type</th>
+    <th>Userty</th>
     <th>Name</th>
     <th>Lastname</th>
     <th>Doctype</th>
@@ -10,7 +10,7 @@
     <th>Email</th>
     <th>Password</th>
     <th>Birthdate</th>
-    <th>Cellhphone</th>
+    <th>Cellphone</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +18,7 @@
 
 <% @people.each do |person| %>
   <tr>
-    <td><%= person.type %></td>
+    <td><%= person.userty %></td>
     <td><%= person.name %></td>
     <td><%= person.lastname %></td>
     <td><%= person.doctype %></td>
@@ -26,7 +26,7 @@
     <td><%= person.email %></td>
     <td><%= person.password %></td>
     <td><%= person.birthdate %></td>
-    <td><%= person.cellhphone %></td>
+    <td><%= person.cellphone %></td>
     <td><%= link_to 'Show', person %></td>
     <td><%= link_to 'Edit', edit_person_path(person) %></td>
     <td><%= link_to 'Destroy', person, confirm: 'Are you sure?', method: :delete %></td>

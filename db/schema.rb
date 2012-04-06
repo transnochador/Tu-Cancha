@@ -11,22 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
 ActiveRecord::Schema.define(:version => 20120405025609) do
 
-  create_table "people", :force => true do |t|
-    t.boolean  "type"
-    t.string   "name"
-    t.string   "lastname"
-    t.string   "doctype"
-    t.string   "docnumber"
-    t.string   "email"
-    t.string   "password"
-    t.date     "birthdate"
-    t.string   "cellhphone"
-   end
-
-  create_table "places", :force => true do |t|
+    create_table "places", :force => true do |t|
     t.string   "nameplace"
     t.string   "address"
     t.string   "district"
