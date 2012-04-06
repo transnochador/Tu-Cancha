@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  userty: false
+  usertype: false
   name: MyString
   lastname: MyString
   doctype: MyString
@@ -9,10 +9,10 @@ one:
   email: MyString
   password: MyString
   birthdate: 2012-04-06
-  cellphone: 2012-04-06
+  cellphone: MyString
 
 two:
-  userty: false
+  usertype: false
   name: MyString
   lastname: MyString
   doctype: MyString
@@ -20,4 +20,4 @@ two:
   email: MyString
   password: MyString
   birthdate: 2012-04-06
-  cellphone: 2012-04-06
+  cellphone: MyString
