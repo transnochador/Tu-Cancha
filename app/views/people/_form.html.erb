@@ -12,39 +12,52 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :usertype %><br />
+    <%= f.label :usertype," Seleccione si es Propietario" %><br />
     <%= f.check_box :usertype %>
   </div>
+  
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name,"Nombres"%><br />
     <%= f.text_field :name %>
   </div>
+  
   <div class="field">
-    <%= f.label :lastname %><br />
+    <%= f.label :lastname,"Apellidos"%><br />
     <%= f.text_field :lastname %>
   </div>
+  
   <div class="field">
-    <%= f.label :doctype %><br />
-    <%= f.text_field :doctype %>
+    <%= f.label :doctype,"Tipo de Documento"%><br />
+    <%= f.select :doctype,
+    options_for_select([
+    ["Seleccione tipo de Documento", ""],
+    "DNI", 
+    "Pasaporte", 
+    "Carnet de Extranjeria"]) %>
   </div>
+  
   <div class="field">
-    <%= f.label :docnumber %><br />
+    <%= f.label :docnumber,"Numero de Documento"%><br />
     <%= f.text_field :docnumber %>
   </div>
+  
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email,"Correo Electronico"%><br />
     <%= f.text_field :email %>
   </div>
+
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password,"Password"%><br />
     <%= f.text_field :password %>
   </div>
+
   <div class="field">
-    <%= f.label :birthdate %><br />
+    <%= f.label :birthdate,"Fecha de Nacimiento"%><br />
     <%= f.date_select :birthdate %>
   </div>
+  
   <div class="field">
-    <%= f.label :cellphone %><br />
+    <%= f.label :cellphone,"Numero de Celular"%><br />
     <%= f.text_field :cellphone %>
   </div>
   <div class="actions">
