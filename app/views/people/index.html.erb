@@ -1,32 +1,33 @@
-<h1>Listing people</h1>
+<h1>Registrate</h1>
 
 <table>
   <tr>
-    <th>Type</th>
-    <th>Name</th>
-    <th>Lastname</th>
-    <th>Doctype</th>
-    <th>Docnumber</th>
+ 
+    <th>Tipo de Usuario</th>
+	<th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Tipo de Documento</th>
+    <th>Nro. Documento</th>
     <th>Email</th>
-    <th>Password</th>
-    <th>Birthdate</th>
-    <th>Cellhphone</th>
+    <th>Fec.Nacimiento</th>
+    <th>Nro. Celular</th>
     <th></th>
     <th></th>
     <th></th>
+	
   </tr>
 
 <% @people.each do |person| %>
   <tr>
-    <td><%= person.type %></td>
+    
+    <td><%= person.usertype %></td>
     <td><%= person.name %></td>
     <td><%= person.lastname %></td>
     <td><%= person.doctype %></td>
     <td><%= person.docnumber %></td>
     <td><%= person.email %></td>
-    <td><%= person.password %></td>
     <td><%= person.birthdate %></td>
-    <td><%= person.cellhphone %></td>
+    <td><%= person.cellphone %></td>
     <td><%= link_to 'Show', person %></td>
     <td><%= link_to 'Edit', edit_person_path(person) %></td>
     <td><%= link_to 'Destroy', person, confirm: 'Are you sure?', method: :delete %></td>
