@@ -1,7 +1,7 @@
 class CreatePeople < ActiveRecord::Migration
   def change
-	create_table :people do |t|
-      t.boolean :usertype
+    create_table :people do |t|
+      t.boolean :userty
       t.string :name
       t.string :lastname
       t.string :doctype
@@ -9,7 +9,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :email
       t.string :password
       t.date :birthdate
-      t.string :cellphone
+      t.date :cellphone
 
       t.timestamps
     end
