@@ -1,11 +1,12 @@
-<h1>Listing places</h1>
+﻿<h1>Listing places</h1>
 
 <table>
   <tr>
-    <th>Nameplace</th>
-    <th>Address</th>
-    <th>District</th>
-    <th>Telephone</th>
+    <th>Nombre Descriptivo</th>
+    <th>Dirección</th>
+    <th>Distrito</th>
+	<th>Dirección en Google Maps</th>
+    <th>Teléfono</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,6 +17,7 @@
     <td><%= place.nameplace %></td>
     <td><%= place.address %></td>
     <td><%= place.district %></td>
+	<td><%= place.gmaddress %></td>
     <td><%= place.telephone %></td>
     <td><%= link_to 'Show', place %></td>
     <td><%= link_to 'Edit', edit_place_path(place) %></td>

@@ -1,33 +1,76 @@
-<%= form_for(@place) do |f| %>
-  <% if @place.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+﻿<%= form_for(@place) do |f| %>
 
-      <ul>
-      <% @place.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render "shared/error_messages", :target => @place %>
 
   <div class="field">
-    <%= f.label :nameplace %><br />
+    <%= f.label "Nombre Descriptivo:" %><br />
     <%= f.text_field :nameplace %>
+	<span>(*)</span>
   </div>
   <div class="field">
-    <%= f.label :address %><br />
+    <%= f.label "Dirección:" %><br />
     <%= f.text_field :address %>
+	<span>(*)</span>
   </div>
   <div class="field">
-    <%= f.label :district %><br />
-    <%= f.text_field :district %>
+    <%= f.label "Distrito:" %><br />
+	<%= f.select :district,
+			options_for_select([
+				["Seleccione un distrito...", ""],
+				"Ancón", 
+				"Ate", 
+				"Barranco", 
+				"Breña", 
+				"Carabayllo", 
+				"Cercado de Lima", 
+				"Chaclacayo",
+				"Chorrillos", 
+				"Cieneguilla", 
+				"Comas", 
+				"Santa Rosa", 
+				"El Agustino", 
+				"Independencia", 
+				"Jesús María", 
+				"La Molina", 
+				"La Victoria", 
+				"Lince", 
+				"Los Olivos", 
+				"Lurigancho-Chosica", 
+				"Lurín", 
+				"Magdalena del Mar", 
+				"Miraflores", 
+				"Pachacamác", 
+				"Pucusana", 
+				"Pueblo Libre", 
+				"Puente Piedra", 
+				"Punta Hermosa", 
+				"Punta Negra", 
+				"Rímac", 
+				"San Bartolo", 
+				"San Borja", 
+				"San Isidro", 
+				"San Juan De Lurigancho", 
+				"San Juan De Miraflores", 
+				"San Luis", 
+				"San Martín de Porres", 
+				"San Miguel", 
+				"Santa Anita", 
+				"Santiago de Surco", 
+				"Surquillo", 
+				"Villa El Salvador", 
+				"Villa María Del Triunfo"]) %>
+  <span>(*)</span>
   </div>
   <div class="field">
-    <%= f.label :telephone %><br />
+    <%= f.label "Dirección en Google Maps:" %><br />
+    <%= f.text_field :gmaddress %>
+	<span>(*)</span>
+	</div>
+  <div class="field">
+    <%= f.label "Teléfono:" %><br />
     <%= f.text_field :telephone %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Registrar'%>
   </div>
 <% end %>

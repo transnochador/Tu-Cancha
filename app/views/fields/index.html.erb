@@ -1,0 +1,55 @@
+﻿<h1>Listado de canchas</h1>
+
+<table>
+  <tr>
+    <th>Nombre de la cancha:</th>
+    <th>Ancho:</th>
+    <th>Largo</th>
+    <th>Tipo de suelo</th>
+    <th>Lu</th>
+    <th>Ma</th>
+    <th>Mi</th>
+    <th>Ju</th>
+    <th>Vi</th>
+    <th>Sa</th>
+    <th>Do</th>
+    <th>Starthour</th>
+    <th>Endhour</th>
+    <th>Tarifa Diurna S/.</th>
+    <th>Tarifa Nocturna S/.</th>
+    <th>Promoción:</th>
+	<th>Foto:</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fields.each do |field| %>
+  <tr>
+    <td><%= field.fieldname %></td>
+    <td><%= field.fieldwidth %></td>
+    <td><%= field.fieldlength %></td>
+    <td><%= field.fieldground %></td>
+    <td><%= field.lu %></td>
+    <td><%= field.ma %></td>
+    <td><%= field.mi %></td>
+    <td><%= field.ju %></td>
+    <td><%= field.vi %></td>
+    <td><%= field.sa %></td>
+    <td><%= field.do %></td>
+    <td><%= field.starthour %></td>
+    <td><%= field.endhour %></td>
+    <td><%= field.dayrate %></td>
+    <td><%= field.nightrate %></td>
+    <td><%= field.promo %></td>
+	<td><%= image_tag field.avatar.url :medium %></td>
+    <td><%= link_to 'Show', field %></td>
+    <td><%= link_to 'Edit', edit_field_path(field) %></td>
+    <td><%= link_to 'Destroy', field, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Field', new_field_path %>

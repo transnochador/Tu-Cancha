@@ -1,0 +1,102 @@
+﻿<%= form_for(@field, :html => { :multipart => true }) do |f| %>
+ 
+  <%= render "shared/error_messages", :target => @field %>
+
+ 
+  <div class="field">
+    <%= f.label "Nombre del Local:" %><br />
+    <%= f.collection_select :place_id, Place.all, :id, :nameplace, :prompt => true %>
+  </div>  
+  <div class="field">
+    <%= f.label "Nombre de la cancha:" %><br />
+    <%= f.text_field :fieldname %>
+  </div>
+  <div class="field">
+    <%= f.label "Ancho (m):" %><br />
+    <%= f.text_field :fieldwidth %>
+  </div>
+  <div class="field">
+    <%= f.label "Largo (m):" %><br />
+    <%= f.text_field :fieldlength %>
+  </div>
+  <div class="field">
+    <%= f.label "Tipo de suelo:" %><br />
+	<%= f.select :fieldground,
+			options_for_select([
+				["Tipo de suelo...", ""],
+				"Concreto", 
+				"Pasto Artificial", 
+				"Pasto Natural"]) %>
+  </div>
+  <div class="table">
+	  Horario de antención:
+	  <table>
+		<tr>
+			<th>Lu</th>
+			<th>Ma</th>
+			<th>Mi</th>
+			<th>Ju</th>
+			<th>Vi</th>
+			<th>Sá</th>
+			<th>Do</th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th>Desde:</th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th>Hasta:</th>
+		</tr>
+		<tr>
+			<th><%= f.check_box :lu %></th>
+			<th><%= f.check_box :ma %></th>
+			<th><%= f.check_box :mi %></th>
+			<th><%= f.check_box :ju %></th>
+			<th><%= f.check_box :vi %></th>
+			<th><%= f.check_box :sa %></th>
+			<th><%= f.check_box :do %></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th><%= f.time_select :starthour %></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th><%= f.time_select :endhour %></th>
+					</tr>
+	</table>
+	</br>
+</div>
+
+  <div class="table">
+	  Tarifas por hora (S/.):
+	  <table>
+		<tr>
+			<th>Diurna</th>
+			<th>Nocturna</th>
+		</tr>
+		<tr>
+			<th><%= f.text_field :dayrate %></th>
+			<th><%= f.text_field :nightrate %></th>
+		</tr>
+	</table>
+</div>
+
+  <div class="field">
+    <%= f.label "Promoción:" %><br />
+    <%= f.text_field :promo %>
+  </div>
+  <div class="field">
+	<%= f.label "Imágen:" %><br />
+	<%= f.file_field :avatar %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Registrar" %>
+  </div>
+<% end %>

@@ -1,0 +1,73 @@
+﻿<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre de la cancha:</b>
+  <%= @field.fieldname %>
+</p>
+
+<p>
+  <b>Ancho:</b>
+  <%= @field.fieldwidth %> metros
+</p>
+
+<p>
+  <b>Largo:</b>
+  <%= @field.fieldlength %> metros
+</p>
+
+<p>
+  <b>Tipo de suelo:</b>
+  <%= @field.fieldground %>
+</p>
+
+ <div class="table">
+	  <b>Horario de antención:</b>
+	  <table>
+		<tr>
+			<script type="text/javascript">
+				if (<%= @field.lu %> == true)
+					document.write("Lu ")
+				if (<%= @field.ma %> == true)
+					document.write("Ma ")
+				if (<%= @field.mi %> == true)
+					document.write("Mi ")
+				if (<%= @field.ju %> == true)
+					document.write("Ju ")
+				if (<%= @field.vi %> == true)
+					document.write("Vi ")
+				if (<%= @field.sa %> == true)
+					document.write("Sa ")
+				if (<%= @field.do %> == true)
+					document.write("Do ")
+			</script>
+		- De: <%= @field.starthour.strftime("%H:%M") %> a <%= @field.endhour.strftime("%H:%M") %> horas
+		</tr>
+		
+	</table>
+</div>
+
+
+<p>
+  <b>Dayrate:</b>
+  <%= @field.dayrate %>
+</p>
+
+<p>
+  <b>Nightrate:</b>
+  <%= @field.nightrate %>
+</p>
+
+<p>
+  <b>Promo:</b>
+  <%= @field.promo %>
+</p>
+
+<p>
+  <b>Imagen:</b>
+  <%= image_tag @field.avatar.url (:thumb) %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_field_path(@field) %> |
+<%= link_to 'Back', fields_path %>

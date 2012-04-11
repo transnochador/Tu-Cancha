@@ -52,7 +52,7 @@ class PlacesController < ApplicationController
       end
     end
   end
-
+  
   # PUT /places/1
   # PUT /places/1.json
   def update

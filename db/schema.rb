@@ -11,8 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+ActiveRecord::Schema.define(:version => 20120408193711) do
 
-ActiveRecord::Schema.define(:version => 20120405025609) do
+  create_table "fields", :force => true do |t|
+    t.string   "fieldname"
+    t.float    "fieldwidth"
+    t.float    "fieldlength"
+    t.string   "fieldground"
+    t.boolean  "lu"
+    t.boolean  "ma"
+    t.boolean  "mi"
+    t.boolean  "ju"
+    t.boolean  "vi"
+    t.boolean  "sa"
+    t.boolean  "do"
+    t.time     "starthour"
+    t.time     "endhour"
+    t.float    "dayrate"
+    t.float    "nightrate"
+    t.string   "promo"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.integer  "place_id"
+  end
 
   create_table "people", :force => true do |t|
     t.boolean  "type"
@@ -24,7 +49,9 @@ ActiveRecord::Schema.define(:version => 20120405025609) do
     t.string   "password"
     t.date     "birthdate"
     t.string   "cellhphone"
-   end
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "places", :force => true do |t|
     t.string   "nameplace"
@@ -33,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20120405025609) do
     t.string   "telephone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "gmaddress"
   end
 
 end
