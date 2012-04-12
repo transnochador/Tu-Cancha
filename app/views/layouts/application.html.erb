@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title><%= @titulo =%></title>
@@ -15,6 +15,8 @@
      <%= link_to_unless_current "Inicio", :action=>"index" %>
      <%= link_to_unless_current "Quienes Somos", :action=>"quienes" %>
      <%= link_to_unless_current "Contactanos", :action=>"contactanos" %>
+     <%= link_to_unless_current "Login", login_url %>
+
      </div>
      <div id="contenido">
      <%= yield %>

@@ -17,7 +17,7 @@
     <td><%= place.nameplace %></td>
     <td><%= place.address %></td>
     <td><%= place.district %></td>
-	<td><%= place.gmaddress %></td>
+	<td><INPUT type="button" value="Ver en Google Maps!" onClick="window.open('<%= place.gmaddress %>','mywindow','width=1024,height=768')"></td>
     <td><%= place.telephone %></td>
     <td><%= link_to 'Show', place %></td>
     <td><%= link_to 'Edit', edit_place_path(place) %></td>

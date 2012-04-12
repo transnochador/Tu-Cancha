@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  adtitle: MyString
+  adcontent: MyText
+  adstartdate: 2012-04-11
+  adenddate: 2012-04-11
+  adprice: 1.5
+  adcount: 1
+  adlocation: MyString
+
+two:
+  adtitle: MyString
+  adcontent: MyText
+  adstartdate: 2012-04-11
+  adenddate: 2012-04-11
+  adprice: 1.5
+  adcount: 1
+  adlocation: MyString

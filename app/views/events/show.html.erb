@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Place:</b>
+  <%= @event.place_id %>
+</p>
+
+<p>
+  <b>Evname:</b>
+  <%= @event.evname %>
+</p>
+
+<p>
+  <b>Evprize:</b>
+  <%= @event.evprize %>
+</p>
+
+<p>
+  <b>Evnummax:</b>
+  <%= @event.evnummax %>
+</p>
+
+<p>
+  <b>Evdeadline:</b>
+  <%= @event.evdeadline %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

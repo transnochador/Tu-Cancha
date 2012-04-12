@@ -1,17 +1,8 @@
-<%= form_for(@person) do |f| %>
-  <% if @person.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+﻿<%= form_for(@person) do |f| %>
 
-      <ul>
-      <% @person.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+ <%= render "shared/error_messages", :target => @person %>
 
-  <div class="field">
+ <div class="field">
     <%= f.label :usertype," Seleccione si es Propietario" %><br />
     <%= f.check_box :usertype %>
   </div>
@@ -47,10 +38,22 @@
   </div>
 
   <div class="field">
+    <%= f.label :email_confirmation,"Confirmar correo electrónico"%><br />
+    <%= f.text_field :email_confirmation %>
+  </div>
+  
+
+  <div class="field">
     <%= f.label :password,"Password"%><br />
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
   </div>
 
+  <div class="field">
+    <%= f.label :password_confirmation,"Confirmar Password"%><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  
+  
   <div class="field">
     <%= f.label :birthdate,"Fecha de Nacimiento"%><br />
     <%= f.date_select :birthdate %>

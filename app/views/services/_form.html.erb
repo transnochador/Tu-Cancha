@@ -1,0 +1,50 @@
+﻿<%= form_for(@service) do |f| %>
+
+    <%= render "shared/error_messages", :target => @service %>
+
+  <div class="field">
+    <%= f.label "Nombre del Local:" %><br />
+    <%= f.collection_select :place_id, Place.all, :id, :nameplace, :prompt => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Tipo de servicio:" %><br />
+	<%= f.select :svctype,
+			options_for_select([
+				["Tipo de servicio...", ""],
+				"Camisetas", 
+				"Árbitros", 
+				"Fotografías",
+				"Otros..."]) %>
+  </div>
+
+    <div class="table">
+	  Tarifa:
+	  <table>
+		<tr>
+			<th>Precio (S/.)</th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th>Concepto:</th>
+		</tr>
+		<tr>
+			<th> <%= f.text_field :svcprice %></th>
+			<th></th>
+			<th></th>
+			<th></th>
+			<th><%= f.text_field :svcpriceconcept %></th>
+		</tr>
+	</table>
+	</br>
+</div>
+   
+</div>
+  <div class="field">
+    <%= f.label "Descripción del servicio:" %><br />
+    <%= f.text_area :svcdescription %>
+</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

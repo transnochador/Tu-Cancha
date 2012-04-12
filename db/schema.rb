@@ -11,7 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120408193711) do
+ActiveRecord::Schema.define(:version => 20120412162946) do
+
+  create_table "ads", :force => true do |t|
+    t.string   "adtitle"
+    t.text     "adcontent"
+    t.date     "adstartdate"
+    t.date     "adenddate"
+    t.float    "adprice"
+    t.integer  "adcount"
+    t.string   "adlocation"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.integer  "place_id"
+    t.string   "evname"
+    t.string   "evprize"
+    t.integer  "evnummax"
+    t.date     "evdeadline"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "fields", :force => true do |t|
     t.string   "fieldname"
@@ -61,6 +83,17 @@ ActiveRecord::Schema.define(:version => 20120408193711) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "gmaddress"
+    t.integer  "person_id"
+  end
+
+  create_table "services", :force => true do |t|
+    t.integer  "place_id"
+    t.string   "svctype"
+    t.float    "svcprice"
+    t.string   "svcpriceconcept"
+    t.text     "svcdescription"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  place_id: 1
+  evname: MyString
+  evprize: MyString
+  evnummax: 1
+  evdeadline: 2012-04-12
+
+two:
+  place_id: 1
+  evname: MyString
+  evprize: MyString
+  evnummax: 1
+  evdeadline: 2012-04-12

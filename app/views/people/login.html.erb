@@ -1,0 +1,16 @@
+﻿<%= form_for(:person) do |f| %>
+
+  <div class="field">
+    <%= f.label :email,"Correo Electrónico"%><br />
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password,"Password"%><br />
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Entrar"%>
+  </div>
+<% end %>

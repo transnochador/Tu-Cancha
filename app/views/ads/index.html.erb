@@ -1,0 +1,35 @@
+<h1>Listing ads</h1>
+
+<table>
+  <tr>
+    <th>Adtitle</th>
+    <th>Adcontent</th>
+    <th>Adstartdate</th>
+    <th>Adenddate</th>
+    <th>Adprice</th>
+    <th>Adcount</th>
+    <th>Adlocation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ads.each do |ad| %>
+  <tr>
+    <td><%= ad.adtitle %></td>
+    <td><%= ad.adcontent %></td>
+    <td><%= ad.adstartdate %></td>
+    <td><%= ad.adenddate %></td>
+    <td><%= ad.adprice %></td>
+    <td><%= ad.adcount %></td>
+    <td><%= ad.adlocation %></td>
+    <td><%= link_to 'Show', ad %></td>
+    <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
+    <td><%= link_to 'Destroy', ad, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad', new_ad_path %>

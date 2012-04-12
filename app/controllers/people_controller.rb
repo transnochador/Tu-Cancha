@@ -1,4 +1,4 @@
-class PeopleController < ApplicationController
+﻿class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
@@ -80,4 +80,20 @@ class PeopleController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # Login
+  def login
+	if request.post?
+		p_person = Person.new(params[:person])
+		person = Person.find_by_email_and_password(p_person.email, p_person.password)
+		if person
+			flash[:notice] = "Se ha identificado correctamente"
+			redirect_to home_url
+		else
+			flash[:notice] = "Dirección de correo ó password incorrectos"
+			redirect_to login_url
+		end
+	end
+  end
+  
 end

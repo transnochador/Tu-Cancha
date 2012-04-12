@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Adtitle:</b>
+  <%= @ad.adtitle %>
+</p>
+
+<p>
+  <b>Adcontent:</b>
+  <%= @ad.adcontent %>
+</p>
+
+<p>
+  <b>Adstartdate:</b>
+  <%= @ad.adstartdate %>
+</p>
+
+<p>
+  <b>Adenddate:</b>
+  <%= @ad.adenddate %>
+</p>
+
+<p>
+  <b>Adprice:</b>
+  <%= @ad.adprice %>
+</p>
+
+<p>
+  <b>Adcount:</b>
+  <%= @ad.adcount %>
+</p>
+
+<p>
+  <b>Adlocation:</b>
+  <%= @ad.adlocation %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>

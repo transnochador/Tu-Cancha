@@ -1,0 +1,27 @@
+﻿<%= form_for(@event) do |f| %>
+    <%= render "shared/error_messages", :target => @event %>
+
+  <div class="field">
+    <%= f.label "Nombre del Local:" %><br />
+    <%= f.collection_select :place_id, Place.all, :id, :nameplace, :prompt => true %>
+  </div>
+  <div class="field">
+    <%= f.label "Nombre del evento:" %><br />
+    <%= f.text_field :evname %>
+  </div>
+  <div class="field">
+    <%= f.label "Premio" %><br />
+    <%= f.text_field :evprize %>
+  </div>
+  <div class="field">
+    <%= f.label "Número máximo de equipos:" %><br />
+    <%= f.number_field :evnummax %>
+  </div>
+  <div class="field">
+    <%= f.label "Plazo para registrarse:" %><br />
+    <%= f.date_select :evdeadline %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Registrar"%>
+  </div>
+<% end %>

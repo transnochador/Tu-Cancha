@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Place:</b>
+  <%= @service.place_id %>
+</p>
+
+<p>
+  <b>Svctype:</b>
+  <%= @service.svctype %>
+</p>
+
+<p>
+  <b>Svcprice:</b>
+  <%= @service.svcprice %>
+</p>
+
+<p>
+  <b>Svcpriceconcept:</b>
+  <%= @service.svcpriceconcept %>
+</p>
+
+<p>
+  <b>Svcdescription:</b>
+  <%= @service.svcdescription %>
+</p>
+
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

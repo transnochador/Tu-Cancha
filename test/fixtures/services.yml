@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  place_id: 1
+  svctype: MyString
+  svcprice: 1.5
+  svcpriceconcept: MyString
+  svcdescription: MyText
+
+two:
+  place_id: 1
+  svctype: MyString
+  svcprice: 1.5
+  svcpriceconcept: MyString
+  svcdescription: MyText

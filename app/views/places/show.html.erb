@@ -17,7 +17,8 @@
 
 <p>
   <b>Dirección en Google Maps:</b>
-  <%= @place.gmaddress %>
+ <INPUT type="button" value="Ver en Google Maps!" onClick="window.open('<%= @place.gmaddress %>','mywindow','width=1024,height=768')"> 
+
 </p>
 
 <p>

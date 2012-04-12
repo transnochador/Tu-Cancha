@@ -1,0 +1,41 @@
+﻿<%= form_for(@ad) do |f| %>
+    <%= render "shared/error_messages", :target => @ad %>
+
+  <div class="field">
+    <%= f.label "Título" %><br />
+    <%= f.text_field :adtitle %>
+  </div>
+  <div class="field">
+    <%= f.label "Contenido" %><br />
+    <%= f.text_area :adcontent %>
+  </div>
+  <div class="field">
+    <%= f.label "Fecha de inicio:" %><br />
+    <%= f.date_select :adstartdate %>
+  </div>
+  <div class="field">
+    <%= f.label "Fecha de fin:" %><br />
+    <%= f.date_select :adenddate %>
+  </div>
+  <div class="field">
+    <%= f.label "Tarifa (S/):" %><br />
+    <%= f.text_field :adprice %>
+  </div>
+  <div class="field">
+    <%= f.label "Número de clics" %><br />
+    <%= f.number_field :adcount %>
+  </div>
+  <div class="field">
+    <%= f.label "Ubicación donde se mostrará" %><br />
+	<%= f.select :adlocation,
+			options_for_select([
+				["Seleccione ubicación...", ""],
+				"Página principal", 
+				"Páginas del cliente", 
+				"Páginas del Dueño"]) %>
+	
+  </div>
+  <div class="actions">
+    <%= f.submit "Registrar" %>
+  </div>
+<% end %>
