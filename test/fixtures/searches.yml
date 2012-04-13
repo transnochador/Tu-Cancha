@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  district: MyString
+  attentionday: 2012-04-13
+  sincehour: 2012-04-13 12:27:07
+  tohour: 2012-04-13 12:27:07
+  other: MyString
+
+two:
+  district: MyString
+  attentionday: 2012-04-13
+  sincehour: 2012-04-13 12:27:07
+  tohour: 2012-04-13 12:27:07
+  other: MyString
