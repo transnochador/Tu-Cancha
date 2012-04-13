@@ -24,5 +24,7 @@ TuCancha::Application.routes.draw do
   root :to => "sitio#index"
   
   match "/login" => "people#login" , :as => :login
-
+  match "/index" => "sitio#index" , :as => :index
+  match "/register" => "people#new" , :as => :register
+  match "/logout" => "people#logout" , :as => :logout
 end

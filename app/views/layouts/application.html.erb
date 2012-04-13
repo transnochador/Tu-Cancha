@@ -1,27 +1,61 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title><%= @titulo =%></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<title>Tu Cancha</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<b><%= stylesheet_link_tag "style" %></b> 
 </head>
-<body>
- <div id="contenido">
-    <h1><div id="cabecera"></h1>
-      <%= @titulo%>
-    </div>
-     <div id="menu">
-     <%= link_to_unless_current "Inicio", :action=>"index" %>
-     <%= link_to_unless_current "Quienes Somos", :action=>"quienes" %>
-     <%= link_to_unless_current "Contactanos", :action=>"contactanos" %>
-     <%= link_to_unless_current "Login", login_url %>
 
-     </div>
-     <div id="contenido">
-     <%= yield %>
-     </div>
-     </div>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- Begin Header -->
+  <div id="header">
+    <h1>Tu Cancha</h10></h1>
+	<% if session[:person_id] %>
+	<h10>Hola <%= session[:person_name] %>!
+	<% end %>
+
+	</div>
+  <!-- End Header -->
+  <!-- Begin Navigation -->
+  <div id="navtop">
+    <ul>
+		<% if not session[:person_id] %>
+			<li><%= link_to_unless_current "Login", login_url %></li>
+		<% else %>
+			<li><%= link_to_unless_current "Logout", logout_url %></li>
+		<% end %>
+		<li><%= link_to_unless_current "Inicio", index_url %></li>
+   </ul>
+  </div>
+  <!-- End Navigation -->
+  <!-- Begin Left Column -->
+  <div id="leftcolumn">
+    <div id="navigation">
+      <ul>
+        <li><a href="http://all-free-download.com/free-website-templates/">> Home</a></li>
+        <li><a href="http://all-free-download.com/free-website-templates/">> Page</a></li>
+        <li><a href="http://all-free-download.com/free-website-templates/">> Page</a></li>
+        <li><a href="http://all-free-download.com/free-website-templates/">> Page</a></li>
+        <li><a href="http://all-free-download.com/free-website-templates/">> Page</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Left Column -->
+  <!-- Begin Right Column -->
+  <div id="maincolumn">
+		<%= yield %>
+
+  
+  
+    <div class="clear"></div>
+  </div>
+  <!-- End Right Column -->
+  <div class="clear"></div>
+  <div id="footer"> &copy; Copyright 2012 by Tu Cancha Team | Design by <a href="http://www.wfiedler-online.de">wfiedler</a><br />
+    Icons by IconArchive (Free for non-commercial use) </div>
+</div>
 
 </body>
 </html>

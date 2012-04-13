@@ -1,0 +1,92 @@
+/* LAYOUT */
+
+* { padding: 0; margin: 0; }
+
+body { background: #039a01 url(images/grass.jpg) repeat fixed; color: #363535; font: normal 11px/18px verdana, arial, helvetica, sans-serif; margin-bottom: 10px; }
+
+#wrapper { background: url(images/bg.gif) repeat-y 0% 0%; border-bottom: 1px solid #336600; margin: 0 auto; width: 650px; }
+
+#header { background: url(images/bg_header.jpg) no-repeat 0% 0%; width: 650px; height: 133px; }
+
+#header h1 { color: #eee8aa;; font: 35px/35px georgia, times new roman, times, serif; letter-spacing: 2px; padding: 20px 0 0 130px; }
+
+#header h10 { color: #e5f5e5; font: bold 11px/18px verdana,arial, helvetica, sans-serif; text-align: left; padding: 130px; }
+
+#leftcolumn { display: inline; width: 180px; float: left; }
+
+#maincolumn { background: url(images/bg_main.gif) no-repeat top right; float: right; width: 430px; padding: 10px 20px 20px 0; display: inline; position: relative; }
+
+#maincolumn p { padding-bottom: 15px; }
+
+#footer { color: #e5f5e5; background-color: #336600; padding: 10px 0 15px 0; height: 30px; text-align: center; }
+
+#footer a { background-image: none; padding: 0; color: #e5f5e5; text-decoration: underline; outline: none; }
+
+#footer a:hover { color: #eee8aa; text-decoration: underline; }
+
+.clear { clear: both; background: none; }
+
+/* NAVIGATION TOP */
+
+#navtop ul { padding: 0; margin: 0 4px 0 0; background: #336600 url(images/bg_navigation.gif) no-repeat; float: right; width: 645px; }
+
+* html #navtop ul { width: 100%; }
+
+#navtop ul li { display: inline; float: right; text-transform: uppercase; color: #e5f5e5; padding: 3px 10px 3px 0px; }
+
+#navtop ul li a { background-image: none; color: #e5f5e5; text-decoration: none; outline: none; padding: 3px 0px 3px 0px; }
+
+#navtop ul li a:hover { color: #eee8aa; text-decoration: underline; }
+
+#navigation { width: 175px; }
+
+/* NAVIGATION LEFT */
+
+#navigation ul { margin-left: 4px; padding-left: 0; list-style-type: none; font-family: Arial, Helvetica, sans-serif; text-transform: uppercase; }
+
+#navigation a { background-image: none; display: block; padding: 5px 3px 5px 7px; width: 165px; background-color: #008000; border-bottom: 1px solid #e5f5e5; outline: none; }
+
+#navigation a:link,#navigation a:active,#navigation a:visited  { color: #e5f5e5; text-decoration: none; }
+
+#navigation a:hover { background-color: #039a01; border-bottom: 1px solid #336600; color: #eee8aa; }
+
+/* SITE STYLES */
+
+#maincolumn h1 { background: url(images/trophy.png) no-repeat 0% 5px;
+font: 20px/42px georgia, times new roman, times, serif; letter-spacing: 2px; padding-left: 36px; }
+
+#maincolumn h2, #maincolumn h3 { background-color: #e5f5e5; font: bold 16px/22px georgia, times new roman, times, serif; letter-spacing: 2px; border-top: 1px solid #363636; border-bottom: 1px solid #363636; margin-bottom: 10px; padding-left: 5px; }
+
+#maincolumn h4, #maincolumn h5, #maincolumn h6 { font: bold 11px/18px verdana, arial, helvetica, sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+
+a, a:link, a:active, a:visited { background: url(images/link.gif) no-repeat 0% 2px; color: #3cb371; font-weight: bold; outline: none; padding-left: 15px; text-decoration: underline; }
+
+a:hover { color: #ff8c00; text-decoration: none; }
+
+div.news { background: url(images/h2_line.gif) repeat-x 0% 15px; text-align: center; }
+
+div.news p { text-align: left; }
+
+div.news a, div.news a:link, div.news a:active, div.news a:visited { background: url(images/page.gif) no-repeat 0% 0%; color: #363636; padding: 0 0 5px 21px; }
+
+div.news a:hover { color: #999; text-decoration: none; }
+
+div.news strong { color: #336600; font: normal 16px/32px georgia, times new roman, times, serif; letter-spacing: 2px; background-color: #fff; padding: 0 5px 0 5px; }
+
+div.tableleft { font-size: 10px; margin: 10px 0 10px 10px; }
+
+div.tableleft table { border: 1px solid #336600; margin-top: 5px; }
+
+div.tableleft td { padding: 0 0 0 2px; }
+
+div.tableleft .yourteam { background-color: #039A01; color: #fff; }
+
+div.tableleft .otherteam { background-color: #fff; }
+
+#leftcolumn h3 { font: bold 11px/18px verdana,arial, helvetica, sans-serif; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0 10px 0; }
+
+#leftcolumn h4 { background: url(images/ball.gif) no-repeat left 6px; margin: 10px 5px 0 0; font: bold 11px/18px verdana,arial, helvetica, sans-serif; text-transform: uppercase; letter-spacing: 2px; text-align: right; border-top: 1px solid #336600; padding-top: 5px; }
+
+
+
+

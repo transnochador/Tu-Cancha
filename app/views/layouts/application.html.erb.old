@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @titulo =%></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <div id="contenido">
+    <h1><div id="cabecera"></h1>
+      <%= @titulo%>
+    </div>
+     <div id="menu">
+     <%= link_to_unless_current "Inicio", :action=>"index" %>
+     <%= link_to_unless_current "Quienes Somos", :action=>"quienes" %>
+     <%= link_to_unless_current "Contactanos", :action=>"contactanos" %>
+     <%= link_to_unless_current "Login", login_url %>
+
+     </div>
+     <div id="contenido">
+     <%= yield %>
+     </div>
+     </div>
+
+</body>
+</html>

@@ -87,13 +87,22 @@
 		p_person = Person.new(params[:person])
 		person = Person.find_by_email_and_password(p_person.email, p_person.password)
 		if person
+			session[:person_id] = person.id
+			session[:person_name] = person.name
+			session[:person_usertype] = person.usertype
 			flash[:notice] = "Se ha identificado correctamente"
-			redirect_to home_url
+			redirect_to index_url
 		else
 			flash[:notice] = "Dirección de correo ó password incorrectos"
 			redirect_to login_url
 		end
 	end
+  end
+  
+  def logout
+	session[:person_id] = nil
+	flash[:notice] = "Gracias por su visita"
+	redirect_to index_url
   end
   
 end

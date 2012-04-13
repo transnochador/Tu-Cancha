@@ -3,67 +3,67 @@
  <%= render "shared/error_messages", :target => @person %>
 
  <div class="field">
-    <%= f.label :usertype," Seleccione si es Propietario" %><br />
-    <%= f.check_box :usertype %>
+    <%= f.label :usertype,"Es dueño de locales?:" %>
+	<%= f.check_box :usertype %>
   </div>
   
   <div class="field">
-    <%= f.label :name,"Nombres"%><br />
+    <%= f.label :name,"Nombres:"%><br />
     <%= f.text_field :name %>
   </div>
   
   <div class="field">
-    <%= f.label :lastname,"Apellidos"%><br />
+    <%= f.label :lastname,"Apellidos:"%><br />
     <%= f.text_field :lastname %>
   </div>
   
   <div class="field">
-    <%= f.label :doctype,"Tipo de Documento"%><br />
+    <%= f.label :doctype,"Tipo de Documento:"%><br />
     <%= f.select :doctype,
     options_for_select([
-    ["Seleccione tipo de Documento", ""],
+    ["Seleccione tipo de documento...", ""],
     "DNI", 
     "Pasaporte", 
     "Carnet de Extranjeria"]) %>
   </div>
   
   <div class="field">
-    <%= f.label :docnumber,"Numero de Documento"%><br />
+    <%= f.label :docnumber,"Numero de Documento:"%><br />
     <%= f.text_field :docnumber %>
   </div>
   
   <div class="field">
-    <%= f.label :email,"Correo Electronico"%><br />
+    <%= f.label :email,"Correo Electrónico:"%><br />
     <%= f.text_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :email_confirmation,"Confirmar correo electrónico"%><br />
+    <%= f.label :email_confirmation,"Confirmar correo electrónico:"%><br />
     <%= f.text_field :email_confirmation %>
   </div>
   
 
   <div class="field">
-    <%= f.label :password,"Password"%><br />
+    <%= f.label :password,"Password:"%><br />
     <%= f.password_field :password %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation,"Confirmar Password"%><br />
+    <%= f.label :password_confirmation,"Confirmar Password:"%><br />
     <%= f.password_field :password_confirmation %>
   </div>
   
   
   <div class="field">
-    <%= f.label :birthdate,"Fecha de Nacimiento"%><br />
+    <%= f.label :birthdate,"Fecha de Nacimiento:"%><br />
     <%= f.date_select :birthdate %>
   </div>
   
   <div class="field">
-    <%= f.label :cellphone,"Numero de Celular"%><br />
+    <%= f.label :cellphone,"Número de Celular:"%><br />
     <%= f.text_field :cellphone %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <br /><%= f.submit "Registrar usuario" %>
   </div>
 <% end %>

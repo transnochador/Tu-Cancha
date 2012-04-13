@@ -1,16 +1,24 @@
-﻿<%= form_for(:person) do |f| %>
+﻿<%= flash[:notice] %>
+<%= form_for(:person) do |f| %>
 
   <div class="field">
-    <%= f.label :email,"Correo Electrónico"%><br />
+    <%= f.label :email,"Correo Electrónico:"%><br />
     <%= f.text_field :email %>
   </div>
 
   <div class="field">
     <%= f.label :password,"Password"%><br />
-    <%= f.password_field :password %>
+    <%= f.password_field :password %><br />
   </div>
 
   <div class="actions">
-    <%= f.submit "Entrar"%>
+    <br /><%= f.submit "Entrar"%><br /><br />
   </div>
+
+  <div class="field">
+	<%= f.label "No tiene usuario?..."%><br />
+	<%= link_to "Regístrese aquí!", register_url %>
+  </div>
+  
 <% end %>
+
