@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>District:</b>
+  <%= @search.district %>
+</p>
+
+<p>
+  <b>Attentionday:</b>
+  <%= @search.attentionday %>
+</p>
+
+<p>
+  <b>Sincehour:</b>
+  <%= @search.sincehour %>
+</p>
+
+<p>
+  <b>Tohour:</b>
+  <%= @search.tohour %>
+</p>
+
+<p>
+  <b>Other:</b>
+  <%= @search.other %>
+</p>
+
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>

@@ -11,11 +11,11 @@
   </div>
   <div class="field">
     <%= f.label "Fecha de inicio:" %><br />
-    <%= f.date_select :adstartdate %>
+    <%= f.date_select :adstartdate, :start_year => 1910%>
   </div>
   <div class="field">
     <%= f.label "Fecha de fin:" %><br />
-    <%= f.date_select :adenddate %>
+    <%= f.date_select :adenddate, :start_year => 1910%>
   </div>
   <div class="field">
     <%= f.label "Tarifa (S/):" %><br />

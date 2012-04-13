@@ -1,5 +1,7 @@
 TuCancha::Application.routes.draw do
 
+  resources :searches
+
   resources :events
 
   resources :ads
