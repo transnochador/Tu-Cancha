@@ -1,8 +1,12 @@
-﻿<h1>Listing places</h1>
+﻿<%= link_to 'Registrar nuevo local', new_place_path %></br></br></br>
+
+<h1>Mis locales</h1>
+
 
 <table>
   <tr>
-    <th>Nombre Descriptivo</th>
+    <th>Usuario</th>
+	<th>Nombre Descriptivo</th>
     <th>Dirección</th>
     <th>Distrito</th>
 	<th>Dirección en Google Maps</th>
@@ -12,9 +16,10 @@
     <th></th>
   </tr>
 
-<% @places.each do |place| %>
+<% @places.each  do |place| %>
   <tr>
-    <td><%= place.nameplace %></td>
+    <td><%= place.person_id %></td>
+	<td><%= place.nameplace %></td>
     <td><%= place.address %></td>
     <td><%= place.district %></td>
 	<td><INPUT type="button" value="Ver en Google Maps!" onClick="window.open('<%= place.gmaddress %>','mywindow','width=1024,height=768')"></td>
@@ -26,6 +31,3 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New Place', new_place_path %>

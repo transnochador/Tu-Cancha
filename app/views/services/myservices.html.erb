@@ -1,0 +1,31 @@
+<h1>Listing services</h1>
+
+<table>
+  <tr>
+    <th>Place</th>
+    <th>Svctype</th>
+    <th>Svcprice</th>
+    <th>Svcpriceconcept</th>
+    <th>Svcdescription</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @services.each do |service| %>
+  <tr>
+    <td><%= service.place_id %></td>
+    <td><%= service.svctype %></td>
+    <td><%= service.svcprice %></td>
+    <td><%= service.svcpriceconcept %></td>
+    <td><%= service.svcdescription %></td>
+    <td><%= link_to 'Show', service %></td>
+    <td><%= link_to 'Edit', edit_service_path(service) %></td>
+    <td><%= link_to 'Destroy', service, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Service', new_service_path %>

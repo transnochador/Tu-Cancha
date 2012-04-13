@@ -1,0 +1,39 @@
+﻿<%= link_to 'Registrar nuevo local', new_place_path %></br></br>
+
+<h1>Mis locales</h1></br>
+
+<% @places.each  do |place| %>
+	<h2><%= place.nameplace %></td></h2>
+
+	<table>
+		<tr>
+			<td>             </td>
+			<td><b>Dirección:</b></td>
+			<td><%= place.address %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><b>Distrito:</b></td>
+			<td><%= place.district %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><b>Teléfono:</b></td>
+			<td><%= place.telephone %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><INPUT type="button" value="Ver Mapa" onClick="window.open('<%= place.gmaddress %>','mywindow','width=1024,height=768')"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= link_to "Editar", edit_place_path(place) %></td>
+			<td><%= link_to 'Eliminar', place, confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
+	</table>
+	</br>
+ 
+<% end %>
+
+

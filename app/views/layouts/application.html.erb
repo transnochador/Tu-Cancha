@@ -26,7 +26,8 @@
 		<% else %>
 			<li><%= link_to_unless_current "Logout", logout_url %></li>
 		<% end %>
-		<li><%= link_to_unless_current "Inicio", index_url %></li>
+		<li><%= link_to_unless_current "Buscar Canchas", index_url %></li>
+
    </ul>
   </div>
   <!-- End Navigation -->
@@ -34,11 +35,16 @@
   <div id="leftcolumn">
     <div id="navigation">
       <ul>
-        <li><a href="http://all-free-download.com/free-website-templates/">> Home</a></li>
-        <li><a href="http://all-free-download.com/free-website-templates/">> Page</a></li>
-        <li><a href="http://all-free-download.com/free-website-templates/">> Page</a></li>
-        <li><a href="http://all-free-download.com/free-website-templates/">> Page</a></li>
-        <li><a href="http://all-free-download.com/free-website-templates/">> Page</a></li>
+		<li><%= link_to "> Inicio", index_url %></li>
+		<% if session[:person_id] %>
+			<% if session[:person_usertype] == true %>
+				<li><%= link_to "> Mis Locales", myplaces_url %></li>
+				<li><%= link_to "> Mis Canchas", myfields_url %></li>
+				<li><%= link_to "> Registrar servicios", myservices_url %></li>
+				<li><%= link_to "> Listar alquileres", myrentals_url %></li>
+				<li><%= link_to "> Registrar eventos", myrentals_url %></li>
+			<% end %>
+		<% end %>
       </ul>
     </div>
   </div>

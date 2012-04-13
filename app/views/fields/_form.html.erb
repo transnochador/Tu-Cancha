@@ -5,8 +5,8 @@
  
   <div class="field">
     <%= f.label "Nombre del Local:" %><br />
-    <%= f.collection_select :place_id, Place.all, :id, :nameplace, :prompt => true %>
-  </div>  
+    <%= f.collection_select :place_id, Place.all(:conditions => ["person_id = ?", session[:person_id]]), :id, :nameplace, :prompt => true %>
+  </div> 
   <div class="field">
     <%= f.label "Nombre de la cancha:" %><br />
     <%= f.text_field :fieldname %>

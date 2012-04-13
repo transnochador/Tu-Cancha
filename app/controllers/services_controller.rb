@@ -9,6 +9,15 @@ class ServicesController < ApplicationController
       format.json { render json: @services }
     end
   end
+  
+  def myservices
+    @services = Service.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @services }
+    end
+  end
 
   # GET /services/1
   # GET /services/1.json

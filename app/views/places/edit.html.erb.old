@@ -1,0 +1,6 @@
+﻿<h1>Edición de local</h1>
+
+<%= render 'form' %></br>
+
+<%= link_to 'Show', @place %> |
+<%= link_to 'Back', places_path %>

@@ -10,7 +10,7 @@ body { background: #039a01 url(images/grass.jpg) repeat fixed; color: #363535; f
 
 #header h1 { color: #eee8aa;; font: 35px/35px georgia, times new roman, times, serif; letter-spacing: 2px; padding: 20px 0 0 130px; }
 
-#header h10 { color: #e5f5e5; font: bold 11px/18px verdana,arial, helvetica, sans-serif; text-align: left; padding: 130px; }
+#header h10 { color: #e5f5e5; font: bold 11px/18px verdana,arial, helvetica, sans-serif; text-align: left; padding: 130px 0px 0px 130px; }
 
 #leftcolumn { display: inline; width: 180px; float: left; }
 
@@ -32,7 +32,7 @@ body { background: #039a01 url(images/grass.jpg) repeat fixed; color: #363535; f
 
 * html #navtop ul { width: 100%; }
 
-#navtop ul li { display: inline; float: right; text-transform: uppercase; color: #e5f5e5; padding: 3px 10px 3px 0px; }
+#navtop ul li { display: inline; float: right; text-transform: uppercase; color: #e5f5e5; padding: 3px 5px 3px 50px; }
 
 #navtop ul li a { background-image: none; color: #e5f5e5; text-decoration: none; outline: none; padding: 3px 0px 3px 0px; }
 
@@ -87,6 +87,22 @@ div.tableleft .otherteam { background-color: #fff; }
 
 #leftcolumn h4 { background: url(images/ball.gif) no-repeat left 6px; margin: 10px 5px 0 0; font: bold 11px/18px verdana,arial, helvetica, sans-serif; text-transform: uppercase; letter-spacing: 2px; text-align: right; border-top: 1px solid #336600; padding-top: 5px; }
 
-
-
-
+#error_explanation {
+  width: 420px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h12 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  el le {
+    font-size: 12px;
+    list-style: square; } }

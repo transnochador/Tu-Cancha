@@ -27,4 +27,10 @@ TuCancha::Application.routes.draw do
   match "/index" => "sitio#index" , :as => :index
   match "/register" => "people#new" , :as => :register
   match "/logout" => "people#logout" , :as => :logout
+  match "/newplace" => "places#new" , :as => :newplace
+  match "/myplaces" => "places#myplaces" , :as => :myplaces
+  match "/myfields" => "fields#myfields" , :as => :myfields
+  match "/myservices" => "services#myservices" , :as => :myservices
+  match "/myrentals" => "sitio#index" , :as => :myrentals
+
 end

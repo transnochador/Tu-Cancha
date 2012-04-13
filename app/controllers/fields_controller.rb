@@ -9,7 +9,16 @@ class FieldsController < ApplicationController
       format.json { render json: @fields }
     end
   end
+  
+  def myfields
+    @fields = Field.joins(:place => :person).where('person_id = ?', session[:person_id])
 
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @fields }
+    end
+  end
  
 
   # GET /fields/1

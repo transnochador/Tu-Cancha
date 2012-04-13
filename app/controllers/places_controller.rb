@@ -9,7 +9,16 @@ class PlacesController < ApplicationController
       format.json { render json: @places }
     end
   end
+  
+  def myplaces
+	@places = Place.all :conditions => ['person_id = ?', session[:person_id]]
 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @places }
+    end
+  end
+  
   # GET /places/1
   # GET /places/1.json
   def show
@@ -36,11 +45,12 @@ class PlacesController < ApplicationController
   def edit
     @place = Place.find(params[:id])
   end
-
+  
   # POST /places
   # POST /places.json
   def create
     @place = Place.new(params[:place])
+	@place.update_attribute(:person_id, session[:person_id])
 
     respond_to do |format|
       if @place.save
@@ -57,6 +67,7 @@ class PlacesController < ApplicationController
   # PUT /places/1.json
   def update
     @place = Place.find(params[:id])
+	@place.update_attribute(:person_id, session[:person_id])
 
     respond_to do |format|
       if @place.update_attributes(params[:place])

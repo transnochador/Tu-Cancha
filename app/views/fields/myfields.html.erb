@@ -1,9 +1,10 @@
-﻿<h1>Listado de canchas</h1>
+﻿<%= link_to 'Registrar nueva cancha', new_field_path %></br></br>
+<h1>Mis canchas</h1></br>
 
 <table>
   <tr>
     <th>Nombre del local:</th>
-    <th>Nombre de la cancha:</th>
+	<th>Nombre de la cancha:</th>
     <th>Ancho:</th>
     <th>Largo</th>
     <th>Tipo de suelo</th>
@@ -27,8 +28,8 @@
 
 <% @fields.each do |field| %>
   <tr>
-	<td><%= field.place_id %></td>
-    <td><%= field.fieldname %></td>
+    <td><%= field.place_id %></td>
+	<td><%= field.fieldname %></td>
     <td><%= field.fieldwidth %></td>
     <td><%= field.fieldlength %></td>
     <td><%= field.fieldground %></td>
@@ -53,5 +54,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New Field', new_field_path %>
