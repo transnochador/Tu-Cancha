@@ -1,4 +1,4 @@
-class FieldsController < ApplicationController
+﻿class FieldsController < ApplicationController
   # GET /fields
   # GET /fields.json
   def index
@@ -13,7 +13,15 @@ class FieldsController < ApplicationController
   def myfields
     @fields = Field.joins(:place => :person).where('person_id = ?', session[:person_id])
 
-
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @fields }
+    end
+  end
+  
+  def fieldsearch
+    @fields = Field.joins(:place).where('district = "Jesús María"')
+	
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fields }

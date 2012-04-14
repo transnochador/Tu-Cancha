@@ -1,7 +1,5 @@
 TuCancha::Application.routes.draw do
 
-  resources :searches
-
   resources :events
 
   resources :ads
@@ -28,6 +26,7 @@ TuCancha::Application.routes.draw do
   match "/login" => "people#login" , :as => :login
   match "/index" => "sitio#index" , :as => :index
   match "/register" => "people#new" , :as => :register
+  match "/fieldsearch" => "fields#fieldsearch", :as => :fieldsearch
   match "/logout" => "people#logout" , :as => :logout
   match "/newplace" => "places#new" , :as => :newplace
   match "/myplaces" => "places#myplaces" , :as => :myplaces
