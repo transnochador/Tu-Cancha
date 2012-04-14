@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120413172707) do
+ActiveRecord::Schema.define(:version => 20120414025113) do
 
   create_table "ads", :force => true do |t|
     t.string   "adtitle"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(:version => 20120413172707) do
     t.float    "adprice"
     t.integer  "adcount"
     t.string   "adlocation"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

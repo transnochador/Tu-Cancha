@@ -1,5 +1,7 @@
 TuCancha::Application.routes.draw do
 
+  resources :comments
+
   resources :events
 
   resources :ads
@@ -33,5 +35,6 @@ TuCancha::Application.routes.draw do
   match "/myfields" => "fields#myfields" , :as => :myfields
   match "/myservices" => "services#myservices" , :as => :myservices
   match "/myrentals" => "sitio#index" , :as => :myrentals
+  
 
 end
