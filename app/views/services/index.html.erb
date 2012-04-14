@@ -1,17 +1,20 @@
-<h1>Listing services</h1>
+<h1>Servicios</h1>
 
 <table>
   <tr>
-    <th>Place</th>
-    <th>Svctype</th>
-    <th>Svcprice</th>
-    <th>Svcpriceconcept</th>
-    <th>Svcdescription</th>
+  
+    <th>Lugar</th>
+    <th>Tipo de Servicio</th>
+    <th>Tarifa:Precio</th>
+    <th>Tarifa:Concepto</th>
+    <th>Descripcion</th>
     <th></th>
     <th></th>
     <th></th>
+    
   </tr>
 
+  
 <% @services.each do |service| %>
   <tr>
     <td><%= service.place_id %></td>

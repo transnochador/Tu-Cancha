@@ -1,0 +1,18 @@
+﻿<%= link_to 'Nuevo Comentario', new_comment_path %>
+<h1>Bienvenido a tu Opinión</h1>
+
+
+
+<% @comments.each do |comment| %>
+  
+    <h3><%= link_to comment.title, comment %></h3>
+    <p><%=h comment.description %></p>
+   
+    <%= link_to 'Editar', edit_comment_path(comment) %>
+    <%= link_to 'Eliminar', comment, confirm: 'Are you sure?', method: :delete %>
+    <br /><hr />
+	
+<% end %>
+
+<br />
+
