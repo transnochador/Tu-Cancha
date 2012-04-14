@@ -1,56 +1,56 @@
-﻿<%= link_to 'Registrar nueva cancha', new_field_path %></br></br>
-<h1>Mis canchas</h1></br>
+﻿<%= form_for(:field) do |f| %>
+ 
 
-<table>
-  <tr>
-    <th>Nombre del local:</th>
-	<th>Nombre de la cancha:</th>
-    <th>Ancho:</th>
-    <th>Largo</th>
-    <th>Tipo de suelo</th>
-    <th>Lu</th>
-    <th>Ma</th>
-    <th>Mi</th>
-    <th>Ju</th>
-    <th>Vi</th>
-    <th>Sa</th>
-    <th>Do</th>
-    <th>Starthour</th>
-    <th>Endhour</th>
-    <th>Tarifa Diurna S/.</th>
-    <th>Tarifa Nocturna S/.</th>
-    <th>Promoción:</th>
-	<th>Foto:</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @fields.each do |field| %>
-  <tr>
-    <td><%= field.place_id %></td>
-	<td><%= field.fieldname %></td>
-    <td><%= field.fieldwidth %></td>
-    <td><%= field.fieldlength %></td>
-    <td><%= field.fieldground %></td>
-    <td><%= field.lu %></td>
-    <td><%= field.ma %></td>
-    <td><%= field.mi %></td>
-    <td><%= field.ju %></td>
-    <td><%= field.vi %></td>
-    <td><%= field.sa %></td>
-    <td><%= field.do %></td>
-    <td><%= field.starthour %></td>
-    <td><%= field.endhour %></td>
-    <td><%= field.dayrate %></td>
-    <td><%= field.nightrate %></td>
-    <td><%= field.promo %></td>
-	<td><%= image_tag field.avatar.url :medium %></td>
-    <td><%= link_to 'Show', field %></td>
-    <td><%= link_to 'Edit', edit_field_path(field) %></td>
-    <td><%= link_to 'Destroy', field, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<div class="field">
+    <%= f.label "Distrito:" %><br />
+	<%= f.select :district,
+			options_for_select([
+				["Seleccione un distrito...", ""],
+				"Ancón", 
+				"Ate", 
+				"Barranco", 
+				"Breña", 
+				"Carabayllo", 
+				"Cercado de Lima", 
+				"Chaclacayo",
+				"Chorrillos", 
+				"Cieneguilla", 
+				"Comas", 
+				"Santa Rosa", 
+				"El Agustino", 
+				"Independencia", 
+				"Jesús María", 
+				"La Molina", 
+				"La Victoria", 
+				"Lince", 
+				"Los Olivos", 
+				"Lurigancho-Chosica", 
+				"Lurín", 
+				"Magdalena del Mar", 
+				"Miraflores", 
+				"Pachacamác", 
+				"Pucusana", 
+				"Pueblo Libre", 
+				"Puente Piedra", 
+				"Punta Hermosa", 
+				"Punta Negra", 
+				"Rímac", 
+				"San Bartolo", 
+				"San Borja", 
+				"San Isidro", 
+				"San Juan De Lurigancho", 
+				"San Juan De Miraflores", 
+				"San Luis", 
+				"San Martín de Porres", 
+				"San Miguel", 
+				"Santa Anita", 
+				"Santiago de Surco", 
+				"Surquillo", 
+				"Villa El Salvador", 
+				"Villa María Del Triunfo"]) %>
+  </div> 
+  
+  <div class="actions">
+    <%= f.submit "Buscar" %>
+  </div>
 <% end %>
-</table>
-
-<br />

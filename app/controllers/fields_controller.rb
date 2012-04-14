@@ -20,7 +20,12 @@
   end
   
   def fieldsearch
-    @fields = Field.joins(:place).where('district = "Jesús María"')
+    if request.post?
+		p_pdistrict = Place.new(params[:place])
+		pdistrict = p_pdistrict.district
+	end
+	
+	@fields = Field.joins(:place).where('district = ?', pdistrict)
 	
     respond_to do |format|
       format.html # index.html.erb

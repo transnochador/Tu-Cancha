@@ -90,6 +90,7 @@
 			session[:person_id] = person.id
 			session[:person_name] = person.name
 			session[:person_usertype] = person.usertype
+			session[:person_email] = person.email
 			flash[:notice] = "Se ha identificado correctamente"
 			redirect_to index_url
 		else
