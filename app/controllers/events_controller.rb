@@ -9,6 +9,16 @@ class EventsController < ApplicationController
       format.json { render json: @events }
     end
   end
+  
+   def myevents
+    @events = Event.all
+	@events = Event.joins(:place => :person).where('person_id = ?', session[:person_id])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @events }
+    end
+  end
 
   # GET /events/1
   # GET /events/1.json
@@ -44,7 +54,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: 'El evento ha sido creado correctamente' }
         format.json { render json: @event, status: :created, location: @event }
       else
         format.html { render action: "new" }
@@ -60,7 +70,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.update_attributes(params[:event])
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @event, notice: 'El evento se ha actualizado correctamente' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -34,5 +34,6 @@ TuCancha::Application.routes.draw do
   match "/myfields" => "fields#myfields" , :as => :myfields
   match "/myservices" => "services#myservices" , :as => :myservices
   match "/myrentals" => "sitio#index" , :as => :myrentals
+  match "/myevents" => "events#myevents", :as => :myevents
 
 end

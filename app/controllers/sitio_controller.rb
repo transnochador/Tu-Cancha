@@ -1,6 +1,11 @@
 class SitioController < ApplicationController
   def index
-  @titulo = "Bienvenidoa Tu Cancha"
+    @events = Event.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @events }
+    end
   end
 
   def quienes

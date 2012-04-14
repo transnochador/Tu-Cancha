@@ -1,0 +1,42 @@
+﻿<%= link_to "Registrar evento", new_event_path %></br></br>
+
+<h1>Mis eventos</h1></br></br>
+
+<% @events.each  do |event| %>
+	<h2><%= event.evname %></td></h2>
+
+	<table>
+		<tr>
+			<td>             </td>
+			<td><b>Local:</b></td>
+			<td><%= event.place_id %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><b>Premio:</b></td>
+			<td><%= event.evprize %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><b>Número máximo de equipos:</b></td>
+			<td><%= event.evnummax %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><b>Plazo para inscripción:</b></td>
+			<td><%= event.evdeadline %></td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><%= link_to "Editar", edit_event_path(event) %></td>
+			<td><%= link_to "Eliminar", event,  method: :delete %></td>
+		</tr>
+	</table>
+	</br>
+ 
+<% end %>
+
+
+<br />
+

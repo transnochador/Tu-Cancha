@@ -1,14 +1,46 @@
+﻿
+    <h1>Bienvenido a Tu Cancha!</h1></br>
+    <p>Este portal ha sido diseñado para el intercambio de información de canchas de fulbito. </p>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+    <div class="news"><strong>Eventos</strong>	</div></br>
+	
+	<% @events.each  do |event| %>
+	<h2><%= event.evname %></td></h2>
 
-    <h1>Welcome! (h1)</h1>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sapien enim, cursus in, aliquam sit amet, convallis eget, metus. Duis dui mi, varius at, lacinia eget, ullamcorper et, tortor. Pellentesque ac pede. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean orci mi, varius eget, mollis vel, rhoncus a, leo. Ut eros enim, vehicula quis, gravida ac, sodales sit amet, orci. Nulla eleifend tristique erat.</p>
-    <div class="news"><strong>Latest News</strong>
-      <p> <a href="http://all-free-download.com/free-website-templates/">Nunc commodo metus et lorem. Phasellus vel libero.</a></p>
-      <p> <a href="http://all-free-download.com/free-website-templates/">Vestibulum eu enim. Mauris pharetra. Vestibulum ligula libero, vestibulum quis, commodo non, sagittis eget, elit.</a></p>
-      <p> <a href="http://all-free-download.com/free-website-templates/">Ut nec tellus. Nunc ligula quam, vulputate ut, imperdiet nec, luctus at, magna. Nunc posuere nulla ac tortor.</a></p>
-    </div>
-    <h2>Headline! (h2, h3)</h2>
-    <p>Quisque vulputate. Aliquam condimentum, odio vel ultrices sodales, augue lorem vehicula mi, vel nonummy nisl eros et tortor. Duis laoreet pellentesque lorem. Nam sagittis condimentum libero. Nullam a ante vel massa accumsan elementum. Sed mauris metus, tincidunt quis, blandit at, viverra a, ligula. Pellentesque neque metus, mattis non, tincidunt vitae, euismod scelerisque, nulla. Fusce justo. Donec nec nibh. Sed suscipit bibendum leo. Nulla erat ligula, egestas consequat, sagittis ut, fermentum a, diam. Sed turpis est, aliquam nec, lacinia sed, aliquam non, libero. Ut turpis. Pellentesque viverra pharetra quam.</p>
-    <p> <a href="http://all-free-download.com/free-website-templates/">This is a link</a></p>
-    <h4>Headline (h4, h5, h6)</h4>
-    <p>Aenean dapibus, leo vitae eleifend porta, sem ipsum nonummy est, eu fermentum arcu lectus in lacus. Vestibulum tristique metus eu lorem. Pellentesque sed erat. Morbi pharetra condimentum massa. Vestibulum vel nulla at eros porta tempus. Fusce at lorem. Nulla facilisis. Phasellus nisl. Integer id massa nec tellus rutrum pellentesque. Mauris orci mauris, dictum vitae, varius eget, vestibulum quis, risus. Pellentesque dictum, magna vitae pulvinar interdum, orci lacus posuere neque, et lacinia dui eros ut erat. Ut purus. Nullam ac tellus et eros condimentum interdum.</p>
+	<table>
+		<tr>
+			<td>             </td>
+			<td><b>Local:</b></td>
+			<td><%= event.place_id %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><b>Premio:</b></td>
+			<td><%= event.evprize %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><b>Número máximo de equipos:</b></td>
+			<td><%= event.evnummax %></td>
+		</tr>
+		<tr>
+			<td>   </td>
+			<td><b>Plazo para inscripción:</b></td>
+			<td><%= event.evdeadline %></td>
+		</tr>
+
+	</table>
+	</br>
+ 
+<% end %>
     <div class="clear"></div>
