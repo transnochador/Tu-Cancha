@@ -37,6 +37,9 @@
       <ul>
 		<li><%= link_to "> Inicio", index_url %></li>
 		<% if session[:person_id] %>
+		<% if session[:person_email] == "abenitesvil@me.com" %>
+			<li><%= link_to "> Registrar Publicidad", myplaces_url %></li>
+		<% end %>
 			<% if session[:person_usertype] == true %>
 				<li><%= link_to "> Mis Locales", myplaces_url %></li>
 				<li><%= link_to "> Mis Canchas", myfields_url %></li>
