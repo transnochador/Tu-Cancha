@@ -16,6 +16,7 @@ TuCancha::Application.routes.draw do
   get "sitio/contactanos"
   
   post "people/login"
+  post "fields/fieldsearch"
 
   resources :people
 
